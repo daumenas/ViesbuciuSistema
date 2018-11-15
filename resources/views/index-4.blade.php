@@ -62,13 +62,11 @@
 			</div>
 		</header>
 <!--==============================Content=================================-->
-		<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - February 10, 2014!</div>
+		<div class="content">
 			<div class="container_12">
 				<div class="grid_5">
 					<h3>CONTACT INFO</h3>
 					<div class="map">
-						<p>TemplateMonster provides 24/7 support for all its <span class="col1"><a href="http://www.templatemonster.com/website-templates.php" rel="nofollow">premium products</a></span>. Freebies go without it.</p>
-						<p>If you have any questions regarding the customization of the chosen free theme, ask <span class="col1"><a href="http://www.templatetuning.com/" rel="nofollow">TemplateTuning</a></span> to help you on a paid basis.</p>
 						<div class="clear"></div>
 						<figure class="">
 							<iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
@@ -132,9 +130,6 @@
 						<a href="#" class="fa fa-facebook"></a>
 						<a href="#" class="fa fa-twitter"></a>
 						<a href="#" class="fa fa-google-plus"></a>
-					</div>
-					<div class="copy">
-						Your Trip (c) 2014 | <a href="#">Privacy Policy</a> | Website Template Designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
 					</div>
 				</div>
 			</div>

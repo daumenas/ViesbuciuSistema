@@ -60,7 +60,7 @@
 			</div>
 		</header>
 <!--==============================Content=================================-->
-		<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - February 10, 2014!</div>
+		<div class="content">
 			<div class="container_12">
 				<div class="grid_7">
 					<h3>Recent Posts</h3>
@@ -121,9 +121,6 @@
 						<a href="#" class="fa fa-facebook"></a>
 						<a href="#" class="fa fa-twitter"></a>
 						<a href="#" class="fa fa-google-plus"></a>
-					</div>
-					<div class="copy">
-						Your Trip (c) 2014 | <a href="#">Privacy Policy</a> | Website Template Designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a>
 					</div>
 				</div>
 			</div>
