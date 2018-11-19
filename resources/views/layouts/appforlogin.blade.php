@@ -70,10 +70,8 @@
             <div class="menu_block">
                 <nav class="horizontal-nav full-width horizontalNav-notprocessed">
                     <ul class="sf-menu">
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="index-1.blade.php">HOT TOURS</a></li>
-                        <li><a href="specialEvents.blade.php">SPECIAL OFFERS</a></li>
-                        <li><a href="">Atsijungti</a></li>
+                        <li class="nav"><a href="{{ route('login') }}">Prisijungti</a></li>
+                        <li><a href="{{ route('register') }}">Registruotis</a></li>
                     </ul>
                 </nav>
                 <div class="clear"></div>
