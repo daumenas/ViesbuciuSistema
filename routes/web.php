@@ -11,11 +11,32 @@
 |
 */
 
-//Route::get('/', function () {
- //   return view('welcome');
-//});
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::view('/','welcome');
+
+Route::get('/', function() {
+    return view('welcome');
+})->name('/');
+
+Route::get('/hotels', function() {
+    return view('searchHotel');
+})->name('hotels');
+
+Route::get('/events', function() {
+    return view('specialEvents');
+})->name('events');
+
+Route::get('/switchinfo/{rating}/{hotelName}',[
+    'uses' => 'ReviewController@saveRating',
+])->name('saveReview');
+
+Route::get('/switchinfo/{hotelName}/{city}',[
+    'uses' => 'HotelController@reserve',
+])->name('saveReview');
+
 
 Auth::routes();
 

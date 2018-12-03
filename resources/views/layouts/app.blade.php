@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/camera.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.2.1.js"></script>
     <script src="js/script.js"></script>
@@ -70,9 +71,9 @@
             <div class="menu_block">
                 <nav class="horizontal-nav full-width horizontalNav-notprocessed">
                     <ul class="sf-menu">
-                        <li><a href="">Pagrindinis puslapis</a></li>
-                        <li><a href="index-1.blade.php">Visi viešbučiai</a></li>
-                        <li><a href="specialEvents.blade.php"></a></li>
+                        <li><a href="{{route('/')}}">Pagrindinis puslapis</a></li>
+                        <li><a href="{{route('hotels')}}">Visi viešbučiai</a></li>
+                        <li><a href="{{route('events')}}">Visi renginiai</a></li>
                         <li><a href="">Atsijungti</a></li>
                     </ul>
                 </nav>

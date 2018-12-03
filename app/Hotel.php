@@ -8,6 +8,6 @@ class Hotel extends Model
 {
     //
     protected $fillable = [
-        'name', 'city', 'pets'
+        'name', 'city', 'pets', 'owner'
     ];
 }
