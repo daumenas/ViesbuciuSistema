@@ -70,9 +70,9 @@
             <div class="menu_block">
                 <nav class="horizontal-nav full-width horizontalNav-notprocessed">
                     <ul class="sf-menu">
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="index-1.blade.php">HOT TOURS</a></li>
-                        <li><a href="specialEvents.blade.php">SPECIAL OFFERS</a></li>
+                        <li><a href="">Pagrindinis puslapis</a></li>
+                        <li><a href="index-1.blade.php">Visi viešbučiai</a></li>
+                        <li><a href="specialEvents.blade.php"></a></li>
                         <li><a href="">Atsijungti</a></li>
                     </ul>
                 </nav>

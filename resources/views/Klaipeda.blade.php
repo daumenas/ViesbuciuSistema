@@ -1,37 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
-    <body>
+<body>
 <div class="slider_wrapper">
     <div id="camera_wrap" class="">
         <div data-src="images/slide.jpg">
             <div class="caption fadeIn">
-                <h2>Kaunas</h2>
+                <h2>Viešbutis NR1</h2>
                 <div class="price">
                     FROM
                     <span>150$</span>
                 </div>
-                <a href="{{route('Kaunas')}}">SUŽINOTI DAUGIAU</a>
+                <a href="#">SUŽINOTI DAUGIAU(IDETI LINKA I JU SVETAINE CJ)</a>
             </div>
         </div>
         <div data-src="images/slide1.jpg">
             <div class="caption fadeIn">
-                <h2>Vilnius</h2>
+                <h2>Viešbutis NR2</h2>
                 <div class="price">
                     FROM
                     <span>$2000</span>
                 </div>
-                <a href="{{route('Vilnius')}}">SUŽINOTI DAUGIAU</a>
+                <a href="#">SUŽINOTI DAUGIAU(IDETI LINKA I JU SVETAINE CJ)</a>
             </div>
         </div>
         <div data-src="images/slide2.jpg">
             <div class="caption fadeIn">
-                <h2>Klaipėda</h2>
+                <h2>Viešbutis NR3</h2>
                 <div class="price">
                     FROM
                     <span>$1600</span>
                 </div>
-                <a href="{{route('Klaipeda')}}">SUŽINOTI DAUGIAU</a>
+                <a href="#">SUŽINOTI DAUGIAU(IDETI LINKA I JU SVETAINE CJ)</a>
             </div>
         </div>
     </div>
@@ -43,9 +43,9 @@
             <div class="banner">
                 <img src="images/Siauliai.jpg" alt="">
                 <div class="label">
-                    <div class="title">Šiauliai</div>
+                    <div class="title">Viešbutis NR4</div>
                     <div class="price">FROM<span>$ 1000</span></div>
-                    <a href="{{route('Siauliai')}}">SUŽINOTI DAUGIAU</a>
+                    <a href="#">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
         </div>
@@ -53,9 +53,9 @@
             <div class="banner">
                 <img src="images/Panevezys.jpg" alt="">
                 <div class="label">
-                    <div class="title">Panevėžys</div>
+                    <div class="title">Viešbutis NR5</div>
                     <div class="price">FROM<span>$ 1.500</span></div>
-                    <a href="{{route('Panevezys')}}">SUŽINOTI DAUGIAU</a>
+                    <a href="#">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
         </div>
@@ -63,9 +63,9 @@
             <div class="banner">
                 <img src="images/Alytus.jpg" alt="">
                 <div class="label">
-                    <div class="title">Alytus</div>
+                    <div class="title">Viešbutis NR6</div>
                     <div class="price">FROM<span>$ 1.600</span></div>
-                    <a href="{{route('Alytus')}}">SUŽINOTI DAUGIAU</a>
+                    <a href="#">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
         </div>
@@ -144,24 +144,9 @@
             </form>
         </div>
         <div class="grid_5 prefix_1">
-            <h3>Welcome</h3>
-            <img src="images/page1_img1.jpg" alt="" class="img_inner fleft">
-            <div class="extra_wrapper">
-                <p>Nezinau kas cia bus.</p>
-                In Bet kazkas bus
-            </div>
+            <h3>Lankytinos vietos</h3>
+            <div class="mapouter"><div class="gmap_canvas"><iframe width="460" height="423" id="gmap_canvas" src="https://maps.google.com/maps?q=Kaunas&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net">wordpress themes</a></div><style>.mapouter{text-align:right;height:423px;width:460px;}.gmap_canvas {overflow:hidden;background:none!important;height:423px;width:460px;}</style></div>
             <div class="clear cl1"></div>
-            <h4>Klientų atsiliepimai</h4>
-            <blockquote class="bq1">
-                <img src="images/page1_img2.jpg" alt="" class="img_inner noresize fleft">
-                <div class="extra_wrapper">
-                    <p>Ši svetainė padėjo man suorganizuoti nuostabę kelionę su šeima </p>
-                    <div class="alright">
-                        <div class="col1">Vardenis Pavardenis</div>
-                        <a href="#" class="btn">Daugiau atsiliepimų</a>
-                    </div>
-                </div>
-            </blockquote>
         </div>
         <div class="grid_12">
             <h3 class="head1">Artėjantys renginiai</h3>
@@ -195,5 +180,6 @@
         </div>
     </div>
 </div>
-    </body>
+</body>
+
 @endsection

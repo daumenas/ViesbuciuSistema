@@ -23,4 +23,17 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::view('/search', 'searchHotel');
 
-Route::view('/Kaunas', 'Kaunas');
+
+
+
+Route::get('/Kaunas', 'CityController@Kaunas')->name('Kaunas');
+
+Route::get('/Klaipeda', 'CityController@Klaipeda')->name('Klaipeda');
+
+Route::get('/Vilnius','CityController@Vilnius')->name('Vilnius');
+
+Route::get('/Alytus', 'CityController@Alytus')->name('Alytus');
+
+Route::get('/Panevezys', 'CityController@Panevezys')->name('Panevezys');
+
+Route::get('/Siauliai', 'CityController@Siauliai')->name('Siauliai');
