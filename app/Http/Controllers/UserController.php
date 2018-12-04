@@ -24,6 +24,11 @@ class UserController extends Controller
         DB::table('users')->update(['name' => $request->Name, 'email' => $request->Email, 'password' => $request->Password, 'role' => $request->Role, 'updated_at' => $request->UpdatedAt, 'created_at' => $request->CreatedAt, 'remember_token' => $request->rememberToken]);
         return view('allUsers');
     }
+    public function editRedirect($id)
+    {
+        $info = DB::table(users)->where(['id' => $id]);
+        return view('allUsers')->with($info);
+    }
 
     /**
      * Remove the specified resource from storage.

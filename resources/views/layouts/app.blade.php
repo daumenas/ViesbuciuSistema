@@ -75,11 +75,11 @@
                         @if(Auth::user()->role == 2) <li><a href="{{route('hotels')}}">Visi viešbučiai</a></li>@endif
                         @if(Auth::user()->role == 2) <li><a href="{{route('events')}}">Visi renginiai</a></li>@endif
                         @if(Auth::user()->role == 2) <li><a href="{{route('allUsers')}}">Visi vartotojai</a></li>@endif
-                        @if(Auth::user()->role == 1) <li><a href="{{route('hotels')}}">Atstovaujami viešbučiai</a></li>@endif
-                        @if(Auth::user()->role == 1) <li><a href="{{route('events')}}">Viešbučių rezervacijos</a></li>@endif
+                        @if(Auth::user()->role == 1) <li><a href="{{route('ownerHotels')}}">Atstovaujami viešbučiai</a></li>@endif
+                        @if(Auth::user()->role == 1) <li><a href="{{route('ownerReservations')}}">Viešbučių rezervacijos</a></li>@endif
                         @if(Auth::user()->role == 0) <li><a href="{{route('hotels')}}">Visi viešbučiai</a></li>@endif
                         @if(Auth::user()->role == 0) <li><a href="{{route('events')}}">Artėjantys renginiai</a></li>@endif
-                        @if(Auth::user()->role == 0) <li><a href="{{route('allUsers')}}">Mano profilis</a></li>@endif
+                        @if(Auth::user()->role == 0) <li><a href="{{route('profileUser')}}">Mano profilis</a></li>@endif
                         <li><a href="{{ route('logout') }}">Atsijungti</a></li>
                     </ul>
                 </nav>

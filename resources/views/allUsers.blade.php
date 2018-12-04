@@ -34,7 +34,6 @@
                                 <td>{{$row->name}} </td>
                                 <td>{{$row->email}} </td>
                                 <td> @if($row->role == "2") Admin @endif @if($row->role == "1") Viešbučių vadovas @endif @if($row->role == "0") Vartotojas @endif </td>
-                                <td><a href="{!! route('editUser', ['id'=>$row->id]) !!}">Edit</a></td>
                                 <td><a href="{!! route('deleteUser', ['id'=>$row->id]) !!}">Delete</a></td>
                             </tr>
                             <?php

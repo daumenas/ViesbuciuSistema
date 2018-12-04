@@ -3,8 +3,8 @@
     <body>
     <div class="">
         <div id="camera_wrap" class="">
-            </div>
         </div>
+    </div>
     </div>
     <!--==============================Content=================================-->
     <div class="content">
@@ -32,22 +32,23 @@
                             </tr>
 
                             <?php
-                            $result = DB::select('SELECT * FROM hotel');
+                                $name = Auth::user()->name;
+                            $result = DB::select("SELECT * FROM hotel WHERE owner = '$name'");
                             foreach($result as $row)
                             {
 
-                                $name = $row->name;
-                                $city = $row->city;
+                            $name = $row->name;
+                            $city = $row->city;
                             $result2 = DB::select("SELECT * FROM review WHERE hotelName = '$name' AND City = '$city'");
                             $rating = 0;
                             $int = 0;
                             foreach ($result2 as $res)
-                                {
+                            {
 
-                                    $rating = $rating + $res->rating;
-                                    $int = $int + 1;
-                                }
-                                if($int > 0)
+                                $rating = $rating + $res->rating;
+                                $int = $int + 1;
+                            }
+                            if($int > 0)
                                 $rating = $rating / $int;
                             $pets = $row->pets;
                             $yes = "Taip";
@@ -80,10 +81,10 @@
 
                         </table>
                     </div>
-                <div class="clear cl1"></div>
+                    <div class="clear cl1"></div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     </body>
 @endsection

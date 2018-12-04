@@ -34,18 +34,22 @@ Route::get('/switchinfo/{rating}/{hotelName}/{city}',[
 ])->name('saveReview');
 
 
-
+//hotel
 Route::post('reservation', 'ReservationController@store');
 
+Route::get('/reservation',function (){
+   return view('reservationForm');
+})->name('reservationForm');
+
 Route::get('/switchinfo/{hotelName}/{city}',[
-    'uses' => 'ReservationController@reserve',
+    'uses' => 'ReservationController@store',
 ])->name('reserveHotel');
 
-Route::get('/switchinfo/{id}',[
+Route::get('/switchifo/{id}',[
     'uses' => 'HotelController@edit',
 ])->name('editHotel');
 
-Route::get('/switchInfo/{id}',[
+Route::get('/switchIfo/{id}',[
     'uses' => 'HotelController@delete',
 ])->name('DeleteHotel');
 
@@ -54,6 +58,42 @@ Route::post('addHotel', 'HotelController@store');
 Route::get('redirectAddHotel', function (){
     return view('redirectAddHotel');
 })->name('redirectAddHotel');
+
+//user
+
+Route::get('/switchinfo/{id}',[
+    'uses' => 'UserController@edit',
+])->name('editUser');
+
+Route::get('/switchInfo/{id}',[
+    'uses' => 'UserController@delete',
+])->name('deleteUser');
+
+Route::post('addUser', 'UserController@store');
+
+Route::get('redirectAddUser', function (){
+    return view('redirectAddUser');
+})->name('redirectAddUser');
+
+Route::get('/profile', function() {
+    return view('userProfile');
+})->name('profileUser');
+
+Route::get('/editUser', function() {
+    return view('userEditForm');
+})->name('editUser');
+
+
+// HOTEL OWNER
+
+Route::get('/ownerHotel', function() {
+    return view('ownerHotels');
+})->name('ownerHotels');
+
+Route::get('/ownerReservations', function() {
+    return view('ownerReservations');
+})->name('ownerReservations');
+
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 

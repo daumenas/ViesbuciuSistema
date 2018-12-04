@@ -26,7 +26,6 @@
 							</tr>
 
                             <?php
-                            $query = "SELECT * FROM tema";
                             $result = DB::select('SELECT * FROM event');
                             foreach($result as $row)
                             {

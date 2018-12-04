@@ -31,26 +31,32 @@
                             </tr>
 
                             <?php
-                            $result = DB::select('SELECT * FROM reservation');
-                            foreach($result as $row)
+                            $name = Auth::user()->name;
+                            $result2 = DB::select("SELECT * FROM hotel WHERE owner = '$name'");
+                            foreach($result2 as $row)
                             {
-                            ?>
-                            <tr>
-                                <td>{{$row->name}} </td>
-                                <td>{{$row->city}} </td>
-                                <td>{{$row->email}} </td>
-                                <td>{{$row->hotel}} </td>
-                                <td>{{$row->checkin}} </td>
-                                <td>{{$row->checkout}} </td>
-                                <td>{{$row->comfort}} </td>
-                                <td>{{$row->adults}} </td>
-                                <td>{{$row->children}} </td>
-                                <td>{{$row->rooms}} </td>
-                                <td>{{$row->extraInfo}} </td>
-                                <td><a href="deleteTema.php?id=<?php echo $row->id ?>&mk=">Delete</a></td>
-                            </tr>
-                            <?php
+                                $hotelName = $row->name;
+                                $result = DB::select("SELECT * FROM reservation WHERE hotel = '$hotelName'");
+                                foreach($result as $row)
+                                {
+                                ?>
+                                <tr>
+                                    <td>{{$row->name}} </td>
+                                    <td>{{$row->city}} </td>
+                                    <td>{{$row->email}} </td>
+                                    <td>{{$row->hotel}} </td>
+                                    <td>{{$row->checkin}} </td>
+                                    <td>{{$row->checkout}} </td>
+                                    <td>{{$row->comfort}} </td>
+                                    <td>{{$row->adults}} </td>
+                                    <td>{{$row->children}} </td>
+                                    <td>{{$row->rooms}} </td>
+                                    <td>{{$row->extraInfo}} </td>
+                                    <td><a href="deleteTema.php?id=<?php echo $row->id ?>&mk=">Delete</a></td>
+                                </tr>
+                                <?php
 
+                                }
                             }
                             ?>
                         </table>
