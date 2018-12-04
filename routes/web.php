@@ -29,13 +29,38 @@ Route::get('/events', function() {
     return view('specialEvents');
 })->name('events');
 
-Route::get('/switchinfo/{rating}/{hotelName}',[
+Route::get('/switchinfo/{rating}/{hotelName}/{city}',[
     'uses' => 'ReviewController@saveRating',
 ])->name('saveReview');
 
+
+
+Route::post('reservation', 'ReservationController@store');
+
 Route::get('/switchinfo/{hotelName}/{city}',[
-    'uses' => 'HotelController@reserve',
-])->name('saveReview');
+    'uses' => 'ReservationController@reserve',
+])->name('reserveHotel');
+
+Route::get('/switchinfo/{id}',[
+    'uses' => 'HotelController@edit',
+])->name('editHotel');
+
+Route::get('/switchInfo/{id}',[
+    'uses' => 'HotelController@delete',
+])->name('DeleteHotel');
+
+Route::post('addHotel', 'HotelController@store');
+
+Route::get('redirectAddHotel', function (){
+    return view('redirectAddHotel');
+})->name('redirectAddHotel');
+
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+Route::get('allUsers', function () {
+
+    return view('allUsers');
+})->name('allUsers');
 
 
 Auth::routes();

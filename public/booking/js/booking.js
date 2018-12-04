@@ -15,7 +15,7 @@ includeScript ('../booking/js/regula.js');
 			var $this = $(this),
 			data = $this.data('bookingForm'),
 			object = {
-				url: 'booking/booking.php', // php-script url
+				url: 'booking/booking.blade.php', // php-script url
 				sender: '', // sender for header in e-mail
 				ownerEmail:'support@template-help.com', // destination e-mail, message will be send on this e-mail
 				validate:true, // validate or not
@@ -29,7 +29,7 @@ includeScript ('../booking/js/regula.js');
 				radioClass: '.tmRadio', // radiobutton class
 				datepickerClass: '.tmDatepicker', // datepicker class
 				wrapperClass: '.controlHolder', // wrapper class, all elements will be wrapped in div with this class
-				successMessage: "Your order has been sent! We'll be in touch soon!", // success message
+				successMessage: "Užsakymas įvykdytas", // success message
 				// private fields
 				form: null,
 				fields: [],
@@ -242,7 +242,7 @@ includeScript ('../booking/js/regula.js');
 						}
 					})
 				},
-				// white fields with data
+				// write fields with data
 				writeFieldsDataDefaults: function (){
 					$.each(object.fields, function (ind, el) {
 						switch (el.type) {

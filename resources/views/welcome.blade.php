@@ -72,11 +72,12 @@
         <div class="clear"></div>
         <div class="grid_6">
             <h3>Rezervacijos Forma</h3>
-            <form id="bookingForm">
+            <form id="bookingForm" method="post" action='reservation'>
                 <div class="fl1">
                     <div class="tmInput">
                         <input name="Name" placeHolder="Vardas:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
                     </div>
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="tmInput">
                         <input name="Country" placeHolder="Miestas:" type="text" data-constraints="@NotEmpty @Required">
                     </div>
@@ -92,21 +93,21 @@
                 <div class="clear"></div>
                 <strong>Check-in</strong>
                 <label class="tmDatepicker">
-                    <input type="text" name="Check-in" placeHolder='10/05/2018' data-constraints="@NotEmpty @Required @Date">
+                    <input type="text" name="Checkin" placeHolder='10/05/2018' data-constraints="@NotEmpty @Required @Date">
                 </label>
                 <div class="clear"></div>
                 <strong>Check-out</strong>
                 <label class="tmDatepicker">
-                    <input type="text" name="Check-out" placeHolder='20/05/2018' data-constraints="@NotEmpty @Required @Date">
+                    <input type="text" name="Checkout" placeHolder='20/05/2018' data-constraints="@NotEmpty @Required @Date">
                 </label>
                 <div class="clear"></div>
                 <div class="tmRadio">
-                    <p>Comfortas</p>
-                    <input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+                    <p>Komfortas</p>
+                    <input name="Comfort" type="radio" id="tmRadio0" value="Pigus" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
                     <span>Pigus</span>
-                    <input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+                    <input name="Comfort" type="radio" id="tmRadio1" value="Standartinis" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
                     <span>Standartinis</span>
-                    <input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+                    <input name="Comfort" type="radio" id="tmRadio2" value="Prabangus" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
                     <span>Prabangus</span>
                 </div>
                 <div class="clear"></div>
@@ -138,9 +139,9 @@
                 </div>
                 <div class="clear"></div>
                 <div class="tmTextarea">
-                    <textarea name="Message" placeHolder="Papildoma informacija" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+                    <textarea name="Message" placeHolder="Papildoma informacija" data-constraints='@NotEmpty @Length(min=20,max=999999)'></textarea>
                 </div>
-                <a href="#" class="btn" data-type="submit">Patvirtinti</a>
+                <input type="submit">
             </form>
         </div>
         <div class="grid_5 prefix_1">

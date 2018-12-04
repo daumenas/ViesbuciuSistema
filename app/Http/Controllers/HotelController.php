@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use App\Hotel;
 use Illuminate\Http\Request;
 
@@ -35,7 +35,8 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::table('hotel')->insert(['name' => $request->Name, 'city' => $request->City, 'extraInfo' => $request->ExtraInfo, 'pets' => $request->Pets, 'owner' => $request->Owner]);
+        return view('searchHotel');
     }
 
     /**
@@ -55,9 +56,10 @@ class HotelController extends Controller
      * @param  \App\Hotel  $hotel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Hotel $hotel)
+    public function edit(Request $request)
     {
-        //
+        DB::table('hotel')->update(['name' => $request->Name, 'city' => $request->Country, 'extraInfo' => $request->ExtraInfo, 'pets' => $request->Pets, 'owner' => $request->Owner]);
+        return view('searchHotel');
     }
 
     /**
@@ -78,8 +80,9 @@ class HotelController extends Controller
      * @param  \App\Hotel  $hotel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Hotel $hotel)
+    public function delete($id)
     {
-        //
+        DB::table('hotel')->delete(['id' => $id]);
+        return redirect('searchHotel');
     }
 }

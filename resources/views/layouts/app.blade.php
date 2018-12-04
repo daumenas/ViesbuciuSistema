@@ -72,9 +72,15 @@
                 <nav class="horizontal-nav full-width horizontalNav-notprocessed">
                     <ul class="sf-menu">
                         <li><a href="{{route('/')}}">Pagrindinis puslapis</a></li>
-                        <li><a href="{{route('hotels')}}">Visi viešbučiai</a></li>
-                        <li><a href="{{route('events')}}">Visi renginiai</a></li>
-                        <li><a href="">Atsijungti</a></li>
+                        @if(Auth::user()->role == 2) <li><a href="{{route('hotels')}}">Visi viešbučiai</a></li>@endif
+                        @if(Auth::user()->role == 2) <li><a href="{{route('events')}}">Visi renginiai</a></li>@endif
+                        @if(Auth::user()->role == 2) <li><a href="{{route('allUsers')}}">Visi vartotojai</a></li>@endif
+                        @if(Auth::user()->role == 1) <li><a href="{{route('hotels')}}">Atstovaujami viešbučiai</a></li>@endif
+                        @if(Auth::user()->role == 1) <li><a href="{{route('events')}}">Viešbučių rezervacijos</a></li>@endif
+                        @if(Auth::user()->role == 0) <li><a href="{{route('hotels')}}">Visi viešbučiai</a></li>@endif
+                        @if(Auth::user()->role == 0) <li><a href="{{route('events')}}">Artėjantys renginiai</a></li>@endif
+                        @if(Auth::user()->role == 0) <li><a href="{{route('allUsers')}}">Mano profilis</a></li>@endif
+                        <li><a href="{{ route('logout') }}">Atsijungti</a></li>
                     </ul>
                 </nav>
                 <div class="clear"></div>
