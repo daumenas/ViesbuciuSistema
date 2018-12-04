@@ -37,7 +37,7 @@
     </div>
 </div>
 <!--==============================Content=================================-->
-<div class="content">
+<div class="content" style="background: #ecd3b0">
     <div class="container_12">
         <div class="grid_4">
             <div class="banner">

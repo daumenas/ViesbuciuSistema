@@ -14,8 +14,8 @@
             <div class="caption fadeIn">
                 <h2>Kaunas</h2>
                 <div class="price">
-                    FROM
-                    <span>150$</span>
+
+                    <span></span>
                 </div>
                 <a href="{{route('Kaunas')}}">SUŽINOTI DAUGIAU</a>
             </div>
@@ -24,8 +24,8 @@
             <div class="caption fadeIn">
                 <h2>Vilnius</h2>
                 <div class="price">
-                    FROM
-                    <span>$2000</span>
+
+                    <span></span>
                 </div>
                 <a href="{{route('Vilnius')}}">SUŽINOTI DAUGIAU</a>
             </div>
@@ -35,7 +35,7 @@
                 <h2>Klaipėda</h2>
                 <div class="price">
                     FROM
-                    <span>$1600</span>
+                    <span></span>
                 </div>
                 <a href="{{route('Klaipeda')}}">SUŽINOTI DAUGIAU</a>
             </div>
@@ -44,34 +44,34 @@
 </div>
 @include('notification')
 <!--==============================Content=================================-->
-<div class="content">
+<div class="content" style="background: #ecd3b0">
     <div class="container_12">
         <div class="grid_4">
             <div class="banner">
-                <img src="images/Siauliai.jpg" alt="">
+                <img src="images/Siauliai.jpg" alt="" width="275" height="275">
                 <div class="label">
                     <div class="title">Šiauliai</div>
-                    <div class="price">FROM<span>$ 1000</span></div>
+                    <div class="price"><span></span></div>
                     <a href="{{route('Siauliai')}}">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
         </div>
         <div class="grid_4">
             <div class="banner">
-                <img src="images/Panevezys.jpg" alt="">
+                <img src="images/Panevezys.jpg" alt="" width="275" height="275">
                 <div class="label">
                     <div class="title">Panevėžys</div>
-                    <div class="price">FROM<span>$ 1.500</span></div>
+                    <div class="price"><span></span></div>
                     <a href="{{route('Panevezys')}}">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
         </div>
         <div class="grid_4">
             <div class="banner">
-                <img src="images/Alytus.jpg" alt="">
+                <img src="images/Alytus2.jpg" alt="" width="275" height="275">
                 <div class="label">
                     <div class="title">Alytus</div>
-                    <div class="price">FROM<span>$ 1.600</span></div>
+                    <div class="price"><span></span></div>
                     <a href="{{route('Alytus')}}">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
@@ -155,8 +155,8 @@
             <h3>Welcome</h3>
             <img src="images/page1_img1.jpg" alt="" class="img_inner fleft">
             <div class="extra_wrapper">
-                <p>Nezinau kas cia bus.</p>
-                In Bet kazkas bus
+                <p>Geriausi atostogų pasiūlymai</p>
+                 TIK pas mus!!!
             </div>
             <div class="clear cl1"></div>
             <h4>Klientų atsiliepimai</h4>
@@ -165,8 +165,8 @@
                 <div class="extra_wrapper">
                     <p>Ši svetainė padėjo man suorganizuoti nuostabę kelionę su šeima </p>
                     <div class="alright">
-                        <div class="col1">Vardenis Pavardenis</div>
-                        <a href="#" class="btn">Daugiau atsiliepimų</a>
+                        <div class="col1">Justė Surgautaitė</div>
+
                     </div>
                 </div>
             </blockquote>

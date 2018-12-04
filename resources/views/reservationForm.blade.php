@@ -5,7 +5,7 @@
     <div class="slider_wrapper">
     </div>
     <!--==============================Content=================================-->
-    <div class="content">
+    <div class="content" style="background: #ecd3b0">
         <div class="container_12">
             <div class="clear"></div>
             <div class="grid_6">

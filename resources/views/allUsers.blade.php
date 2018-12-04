@@ -7,15 +7,13 @@
     </div>
     </div>
     <!--==============================Content=================================-->
-    <div class="content">
+    <div class="content" style="background: #ecd3b0">
         <div class="container_12">
             <div class="clear"></div>
-            <div class="grid_6">
-            </div>
-            <div class="grid_6">
+            <div class="grid">
                 <h3>Vartotojų sąrašas</h3>
                 <div class="">
-                    <div class="table-responsive">
+                    <div class="table-responsive" style="background: white">
                         <table class="table">
                             <tr>
                                 <th>Vardas</th>

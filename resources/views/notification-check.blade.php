@@ -11,7 +11,7 @@
 @include('notification')
 
 
-<div class="container">
+<div class="container" style="background: #ecd3b0">
 
 
     <div class="row">

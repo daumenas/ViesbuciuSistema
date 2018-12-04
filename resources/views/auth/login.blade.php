@@ -2,7 +2,7 @@
 
 @section('content')
     <body>
-    <div class="content">
+    <div class="content" style="background: #ecd3b0">
         <div class="container_12">
             <div class="clear"></div>
             <div class="grid_6">
@@ -50,8 +50,8 @@
                 <h3>Welcome</h3>
                 <img src="images/page1_img1.jpg" alt="" class="img_inner fleft">
                 <div class="extra_wrapper">
-                    <p>Nezinau kas cia bus.</p>
-                    In Bet kazkas bus
+                    <p>Geriausi atostogų pasiūlymai</p>
+                    TIK pas mus!!!
                 </div>
                 <div class="clear cl1"></div>
                 <h4>Klientų atsiliepimai</h4>
@@ -60,8 +60,8 @@
                     <div class="extra_wrapper">
                         <p>Ši svetainė padėjo man suorganizuoti nuostabę kelionę su šeima </p>
                         <div class="alright">
-                            <div class="col1">Vardenis Pavardenis</div>
-                            <a href="#" class="btn">Daugiau atsiliepimų</a>
+                            <div class="col1">Justė Surgautaitė</div>
+
                         </div>
                     </div>
                 </blockquote>

@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        h1 {
+            background-color: green;
+        }
+
+        div {
+            background-color: black;
+        }
+
+        p {
+            background-color: yellow;
+        }
+    </style>
     <title>About</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no" />
@@ -66,10 +79,10 @@
 <body class="page1" id="top">
 <!--==============================header=================================-->
 <header>
-    <div class="container_12">
+    <div class="container_12"  >
         <div class="grid_12">
-            <div class="menu_block">
-                <nav class="horizontal-nav full-width horizontalNav-notprocessed">
+            <div class="menu_block" style="background: #c86866" !important>
+                <nav class="horizontal-nav full-width horizontalNav-notprocessed" >
                     <ul class="sf-menu">
                         <li><a href="{{route('/')}}">Pagrindinis puslapis</a></li>
                         @if(Auth::user()->role == 2) <li><a href="{{route('hotels')}}">Visi viešbučiai</a></li>@endif
@@ -91,7 +104,7 @@
 @yield('content')
 <!--==============================footer=================================-->
 <footer>
-    <div class="container_12">
+    <div class="container_12" >
         <div class="grid_12">
             <div class="socials">
                 <a href="#" class="fa fa-facebook"></a>

@@ -63,6 +63,16 @@ Route::get('redirectAddHotel', function (){
     return view('redirectAddHotel');
 })->name('redirectAddHotel');
 
+Route::get('redirectAddEvent', function (){
+    return view('redirectAddEvent');
+})->name('redirectAddEvent');
+
+Route::post('addEvent', 'EventController@store');
+
+Route::get('/sw/{id}',[
+    'uses' => 'EventController@delete',
+])->name('DeleteEvent');
+
 //user
 
 Route::get('notification', 'UserController@notification');

@@ -7,21 +7,20 @@
 	</div>
 	</div>
 	<!--==============================Content=================================-->
-	<div class="content">
+	<div class="content" style="background: #ecd3b0">
 		<div class="container_12">
 			<div class="clear"></div>
-			<div class="grid_6">
-			</div>
-			<div class="grid_6">
+			<div class="grid">
 				<h3>Artėjančių renginių sąrašas</h3>
 				<div class="">
-					<div class="table-responsive">
+					<div class="table-responsive" style="background: white">
 						<table class="table">
 							<tr>
 								<th>Pavadinimas</th>
 								<th>Miestas</th>
 								<th>Data</th>
 								<th>Papildoma Informacija</th>
+								@if(Auth::user()->role == 2 || Auth::user()->role == 1) <th><a href="{{ route('redirectAddEvent') }}">Pridėti renginį</a></th>@endif
 
 							</tr>
 
@@ -35,8 +34,8 @@
 								<td>{{$row->city}} </td>
 								<td>{{$row->date}} </td>
 								<td>{{$row->info}} </td>
-								<td><a href="editTema.php?id=<?php echo $row->id ?>&mk=">Edit</a></td>
-								<td><a href="deleteTema.php?id=<?php echo $row->id ?>&mk=">Delete</a></td>
+								@if(Auth::user()->role == 2) <td><a href="{{route('redirectAddEvent')}}">Edit</a></td>@endif
+								@if(Auth::user()->role == 2) <td><a href="{!! route('DeleteEvent', ['id'=>$row->id]) !!}">Delete</a></td>@endif
 							</tr>
                             <?php
 
