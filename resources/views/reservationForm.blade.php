@@ -79,6 +79,9 @@
                     <div class="tmTextarea">
                         <textarea name="Message" placeHolder="Papildoma informacija" data-constraints='@NotEmpty @Length(min=20,max=999999)'></textarea>
                     </div>
+                    <div class="tminput">
+                        <input name="discount" placeHolder="Nuolaidos kodas" data-constraints=''></input>
+                    </div>
                     <input type="submit">
                 </form>
             </div>

@@ -66,37 +66,53 @@
                     </div>
                 </blockquote>
             </div>
+            <?php
+            $result = DB::table('event')->orderBy('id', 'desc')->take(5)->get();
+            ?>
             <div class="grid_12">
                 <h3 class="head1">Artėjantys renginiai</h3>
             </div>
+            @if(count($result) > 0)
             <div class="grid_4">
                 <div class="block1">
-                    <time datetime="2018-12-01">12<span>Gruod</span></time>
+                    <time datetime="2018-12-01">{{$result[0]->date}}</time>
                     <div class="extra_wrapper">
-                        <div class="text1 col1"><a href="#">Aliquam nibh</a></div>
-                        Proin pharetra luctus diam, any scelerisque eros convallisumsan. Maecenas vehicula egestas
+                        <div class="text1 col1"><a href="#">{{$result[0]->name}}</a></div>
+                        {{$result[0]->info}}
                     </div>
                 </div>
             </div>
+            @endif
+            @if(count($result) > 1)
             <div class="grid_4">
                 <div class="block1">
-                    <time datetime="2018-01-01">1<span>Sau</span></time>
+                    <time datetime="2018-01-01">{{$result[1]->date}}</time>
                     <div class="extra_wrapper">
-                        <div class="text1 col1"><a href="#">Etiam dui eros</a></div>
-                        Any scelerisque eros vallisumsan. Maecenas vehicula egestas natis. Duis massa elit, auctor non
+                        <div class="text1 col1"><a href="#">{{$result[1]->name}}</a></div>
+                        {{$result[1]->info}}
+                    </div>
+                </div>
+
+            </div>
+            @endif
+            @if(count($result) > 2)
+            <div class="grid_4">
+                <div class="block1">
+                    <time datetime="2018-02-01">{{$result[2]->date}}</time>
+                    <div class="extra_wrapper">
+                        <div class="text1 col1"><a href="#">{{$result[2]->name}}</a></div>
+                        {{$result[2]->info}}
                     </div>
                 </div>
             </div>
-            <div class="grid_4">
-                <div class="block1">
-                    <time datetime="2018-02-01">02<span>Vas</span></time>
-                    <div class="extra_wrapper">
-                        <div class="text1 col1"><a href="#">uamnibh Edeto</a></div>
-                        Ros convallisumsan. Maecenas vehicula egestas venenatis. Duis massa elit, auctor non
-                    </div>
-                </div>
-            </div>
+            @endif
         </div>
+            <?php
+
+
+            ?>
+
+
     </div>
     </body>
 @endsection
