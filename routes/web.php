@@ -41,6 +41,10 @@ Route::get('/reservation',function (){
    return view('reservationForm');
 })->name('reservationForm');
 
+Route::get('/userReservation',function (){
+    return view('userReservation');
+})->name('userReservation');
+
 Route::get('/switchinfo/{hotelName}/{city}',[
     'uses' => 'ReservationController@store',
 ])->name('reserveHotel');
@@ -60,6 +64,8 @@ Route::get('redirectAddHotel', function (){
 })->name('redirectAddHotel');
 
 //user
+
+Route::get('notification', 'UserController@notification');
 
 Route::get('/switchinfo/{id}',[
     'uses' => 'UserController@edit',

@@ -30,6 +30,7 @@ class UserController extends Controller
         return view('allUsers')->with($info);
     }
 
+
     /**
      * Remove the specified resource from storage.
      *
@@ -41,4 +42,13 @@ class UserController extends Controller
         DB::table('users')->delete(['id' => $id]);
         return redirect('allUsers');
     }
+
+    public static function firstTime($id)
+    {
+        DB::table('users')->where(['id' => $id])->update(['firstTime' => 1]);
+
+    }
+
+
+
 }

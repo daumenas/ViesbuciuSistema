@@ -47,7 +47,6 @@
                                 <td>{{$row->children}} </td>
                                 <td>{{$row->rooms}} </td>
                                 <td>{{$row->extraInfo}} </td>
-                                <td><a href="deleteTema.php?id=<?php echo $row->id ?>&mk=">Delete</a></td>
                             </tr>
                             <?php
 

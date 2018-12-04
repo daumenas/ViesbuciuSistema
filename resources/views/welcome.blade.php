@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+<head>
+    <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+    <link rel="stylesheet" href="http://demo.itsolutionstuff.com/plugin/bootstrap-3.min.css">
+</head>
+
 @section('content')
     <body>
+    @if(Auth::user()->firstTime == '0')<div class='notifications top-left'></div>@endif
 <div class="slider_wrapper">
     <div id="camera_wrap" class="">
         <div data-src="images/slide.jpg">
@@ -36,6 +42,7 @@
         </div>
     </div>
 </div>
+@include('notification')
 <!--==============================Content=================================-->
 <div class="content">
     <div class="container_12">
@@ -197,4 +204,10 @@
     </div>
 </div>
     </body>
+    <script>
+        $('.top-left').delay(900000000000000000000).notify({
+            message: { text: 'DISCOUNT CODE: 11111' }
+
+        }).show();
+    </script>
 @endsection

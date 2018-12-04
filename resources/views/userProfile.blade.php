@@ -69,6 +69,10 @@
                             foreach($result2 as $row)
                             {
 
+                                if(count($result) > 0)
+                                    {
+                                        \App\Http\Controllers\UserController::firstTime(Auth::id());
+                                    }
                             ?>
                             <tr>
                                 <td>{{$row->name}} </td>

@@ -28,6 +28,7 @@
                                 <th nowrap> 7-8</th>
                                 <th nowrap> 9-10</th>
                                 @if(Auth::user()->role == 2 || Auth::user()->role == 1) <th><a href="{{ route('redirectAddHotel') }}">Pridėti Viešbutį</a></th>@endif
+                                @if(Auth::user()->role == 2) <th><a href="{{ route('userReservation') }}">Peržiūrėti rezervacijas</a></th>@endif
 
                             </tr>
 
