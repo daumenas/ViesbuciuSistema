@@ -9,7 +9,7 @@
         <div class="container_12">
             <div class="clear"></div>
             <div class="grid_6">
-                <h3>Viešbučio pridėjimo forma</h3>
+                <h3>Viešbučio rezervacijos forma</h3>
                 <form id="bookingForm" method="post" action='reservation'>
                     <div class="fl1">
                         <div class="tmInput">

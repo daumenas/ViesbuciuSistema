@@ -13,7 +13,7 @@
             <div class="grid_6">
             </div>
             <div class="grid">
-                <h3>Vartotojų sąrašas</h3>
+                <h3>Vartotojo profilis ir rezervacijos</h3>
                 <div class="">
                     <div class="table-responsive" style="background: white">
                         <table class="table">
@@ -41,9 +41,11 @@
                             </tr>
                             <?php
 
+
                             }
                             ?>
                             <tr>
+
                                 <th>Vardas</th>
                                 <th>Miestas</th>
                                 <th>Paštas</th>
@@ -58,8 +60,8 @@
 
 
                             </tr>
-
                             <?php
+
                             $email = Auth::user()->email;
                             $name = Auth::user()->name;
 
@@ -86,7 +88,6 @@
                                 <td>{{$row->children}} </td>
                                 <td>{{$row->rooms}} </td>
                                 <td>{{$row->extraInfo}} </td>
-                               <td><a href="{!! route('editUser', ['id'=>$row->id]) !!}">Edit</a></td>
                             </tr>
                             <?php
 

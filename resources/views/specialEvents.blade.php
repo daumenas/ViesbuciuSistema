@@ -34,7 +34,7 @@
 								<td>{{$row->city}} </td>
 								<td>{{$row->date}} </td>
 								<td>{{$row->info}} </td>
-								@if(Auth::user()->role == 2) <td><a href="{{route('redirectAddEvent')}}">Edit</a></td>@endif
+								@if(Auth::user()->role == 2) <td><a href="{{route('redirectEditEvent', ['id'=>$row->id])}}">Edit</a></td>@endif
 								@if(Auth::user()->role == 2) <td><a href="{!! route('DeleteEvent', ['id'=>$row->id]) !!}">Delete</a></td>@endif
 							</tr>
                             <?php

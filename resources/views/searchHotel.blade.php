@@ -52,11 +52,12 @@
                                 $rating = $rating / $int;
                             $pets = $row->pets;
                             $yes = "Taip";
+                            $yes2 = "taip";
 
                             ?>
                             <tr>
 
-                                <td>@if($pets == $yes) <img src="images/petFriendly.png" alt="" border=3 height=80 width=100> @endif @if($pets != $yes) Ne @endif </td>
+                                <td>@if($pets == $yes || $pets == $yes2) <img src="images/petFriendly.png" alt="" border=3 height=80 width=100> @endif @if($pets != $yes) Ne @endif </td>
                                 <td>{{$row->name}} </td>
                                 <td>{{$row->city}} </td>
                                 <td align="center">@if($rating == 0) Nėra @endif @if($rating < 3 && $rating > 0)  <img src="images/1-2.png" alt="" border=3 height=20 width=20> @endif @if($rating >= 3 && $rating <5) <img src="images/3-4.png" alt="" border=3 height=20 width=20> @endif @if($rating >= 5 && $rating < 7) <img src="images/5-6.png" alt="" border=3 height=20 width=20> @endif @if($rating >= 7 && $rating < 9) <img src="images/7-8.png" alt="" border=3 height=20 width=20> @endif @if($rating >= 9) <img src="images/9-10.png" alt="" border=3 height=20 width=20> @endif </td>
@@ -69,9 +70,10 @@
                                 <td><a href="{!! route('saveReview', ['rating'=>'10', 'hotelName'=>$row->name, 'city'=>$row->city]) !!}"><img src="images/9-10.png" alt="" border=3 height=20 width=20></a></td>
 
 
-                                @if(Auth::user()->role == 2 || Auth::user()->role == 1) <td><a href="{{route('reservationForm')}}">Edit</a></td>@endif
+                                @if(Auth::user()->role == 2 || Auth::user()->role == 1) <td><a href="{!! route('redirectEditHotel', ['id'=>$row->id]) !!}">Edit</a></td>@endif
                                 @if(Auth::user()->role == 2 || Auth::user()->role == 1) <td><a href="{!! route('DeleteHotel', ['id'=>$row->id]) !!}">Delete</a></td>@endif
                                 <td><a href="{{route('reservationForm')}}">Rezervuoti</a></td>
+
                             </tr>
                             <?php
 

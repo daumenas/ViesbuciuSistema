@@ -58,7 +58,7 @@ class HotelController extends Controller
      */
     public function edit(Request $request)
     {
-        DB::table('hotel')->update(['name' => $request->Name, 'city' => $request->Country, 'extraInfo' => $request->ExtraInfo, 'pets' => $request->Pets, 'owner' => $request->Owner]);
+            DB::table('hotel')->where(['id' => $request->id])->update(['name' => $request->Name, 'city' => $request->City, 'extraInfo' => $request->ExtraInfo, 'pets' => $request->Pets, 'owner' => $request->Owner]);
         return view('searchHotel');
     }
 
@@ -83,6 +83,13 @@ class HotelController extends Controller
     public function delete($id)
     {
         DB::table('hotel')->delete(['id' => $id]);
-        return redirect('searchHotel');
+        return redirect('redirectHotel');
+    }
+
+    public function editRedirect($id)
+    {
+        $hotel = DB::select("SELECT * FROM hotel WHERE id = '$id'");
+
+        return redirect('EditHotel')->with('hotel', $hotel);
     }
 }

@@ -63,9 +63,37 @@ Route::get('redirectAddHotel', function (){
     return view('redirectAddHotel');
 })->name('redirectAddHotel');
 
+Route::get('redirectHotel', function (){
+    return view('searchHotel');
+})->name('redirectHotel');
+
+Route::get('EditHotel', function (){
+    return view('redirectEditHotel');
+})->name('EditHotel');
+
+Route::post('editHotel', 'HotelController@edit');
+
+Route::get('/redirectEditHotel/{id}', [
+    'uses' => 'HotelController@editRedirect',
+])->name('redirectEditHotel');
+
+Route::get('redirectEvent', function (){
+    return view('specialEvents');
+})->name('redirectEvent');
+
 Route::get('redirectAddEvent', function (){
     return view('redirectAddEvent');
 })->name('redirectAddEvent');
+
+Route::get('EditEvent', function (){
+    return view('redirectEditEvent');
+})->name('EditEvent');
+
+Route::post('editEvent', 'EventController@edit');
+
+Route::get('/redirectEditEvent/{id}', [
+    'uses' => 'EventController@editRedirect',
+])->name('redirectEditEvent');
 
 Route::post('addEvent', 'EventController@store');
 

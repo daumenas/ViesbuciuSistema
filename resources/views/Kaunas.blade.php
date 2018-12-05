@@ -4,34 +4,34 @@
     <body>
     <div class="slider_wrapper">
         <div id="camera_wrap" class="">
-            <div data-src="images/slide.jpg">
+            <div data-src="images/sandija.jpg">
                 <div class="caption fadeIn">
-                    <h2>Viešbutis NR1</h2>
+                    <h2>Sandija</h2>
                     <div class="price">
-                        FROM
-                        <span>150$</span>
+
+                        <span></span>
                     </div>
-                    <a href="#">SUŽINOTI DAUGIAU(IDETI LINKA I JU SVETAINE CJ)</a>
+                    <a href="#">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
-            <div data-src="images/slide1.jpg">
+            <div data-src="images/europe.jpg">
                 <div class="caption fadeIn">
-                    <h2>Viešbutis NR2</h2>
+                    <h2>Europa Royale</h2>
                     <div class="price">
-                        FROM
-                        <span>$2000</span>
+
+                        <span></span>
                     </div>
-                    <a href="#">SUŽINOTI DAUGIAU(IDETI LINKA I JU SVETAINE CJ)</a>
+                    <a href="#">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
-            <div data-src="images/slide2.jpg">
+            <div data-src="images/perkuno.jpg">
                 <div class="caption fadeIn">
-                    <h2>Viešbutis NR3</h2>
+                    <h2>Perkūno namai</h2>
                     <div class="price">
-                        FROM
-                        <span>$1600</span>
+
+                        <span></span>
                     </div>
-                    <a href="#">SUŽINOTI DAUGIAU(IDETI LINKA I JU SVETAINE CJ)</a>
+                    <a href="#">SUŽINOTI DAUGIAU</a>
                 </div>
             </div>
         </div>
@@ -41,30 +41,30 @@
         <div class="container_12">
             <div class="grid_4">
                 <div class="banner">
-                    <img src="images/Siauliai.jpg" alt="">
+                    <img src="images/magnus.jpg" alt="" width="300" height="300">
                     <div class="label">
-                        <div class="title">Viešbutis NR4</div>
-                        <div class="price">FROM<span>$ 1000</span></div>
+                        <div class="title">Magnus</div>
+                        <div class="price"></div>
                         <a href="#">SUŽINOTI DAUGIAU</a>
                     </div>
                 </div>
             </div>
             <div class="grid_4">
                 <div class="banner">
-                    <img src="images/Panevezys.jpg" alt="">
+                    <img src="images/algirdo.jpg" alt="" width="300" height="300">
                     <div class="label">
-                        <div class="title">Viešbutis NR5</div>
-                        <div class="price">FROM<span>$ 1.500</span></div>
+                        <div class="title">Algiro</div>
+                        <div class="price"></div>
                         <a href="#">SUŽINOTI DAUGIAU</a>
                     </div>
                 </div>
             </div>
             <div class="grid_4">
                 <div class="banner">
-                    <img src="images/Alytus.jpg" alt="">
+                    <img src="images/babilonas.jpg" alt="" width="300" height="300">
                     <div class="label">
-                        <div class="title">Viešbutis NR6</div>
-                        <div class="price">FROM<span>$ 1.600</span></div>
+                        <div class="title">Hotel Babilonas</div>
+                        <div class="price"></div>
                         <a href="#">SUŽINOTI DAUGIAU</a>
                     </div>
                 </div>
@@ -148,36 +148,46 @@
                 <div class="mapouter"><div class="gmap_canvas"><iframe width="460" height="423" id="gmap_canvas" src="https://maps.google.com/maps?q=Kaunas&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net">wordpress themes</a></div><style>.mapouter{text-align:right;height:423px;width:460px;}.gmap_canvas {overflow:hidden;background:none!important;height:423px;width:460px;}</style></div>
                 <div class="clear cl1"></div>
             </div>
+            <?php
+            $result = DB::table('event')->orderBy('id', 'desc')->take(5)->get();
+            ?>
             <div class="grid_12">
                 <h3 class="head1">Artėjantys renginiai</h3>
             </div>
-            <div class="grid_4">
-                <div class="block1">
-                    <time datetime="2018-12-01">12<span>Gruod</span></time>
-                    <div class="extra_wrapper">
-                        <div class="text1 col1"><a href="#">Aliquam nibh</a></div>
-                        Proin pharetra luctus diam, any scelerisque eros convallisumsan. Maecenas vehicula egestas
+            @if(count($result) > 0)
+                <div class="grid_4">
+                    <div class="block1">
+                        <time datetime="2018-12-01">{{$result[0]->date}}</time>
+                        <div class="extra_wrapper">
+                            <div class="text1 col1"><a href="#">{{$result[0]->name}}</a></div>
+                            {{$result[0]->info}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="grid_4">
-                <div class="block1">
-                    <time datetime="2018-01-01">1<span>Sau</span></time>
-                    <div class="extra_wrapper">
-                        <div class="text1 col1"><a href="#">Etiam dui eros</a></div>
-                        Any scelerisque eros vallisumsan. Maecenas vehicula egestas natis. Duis massa elit, auctor non
+            @endif
+            @if(count($result) > 1)
+                <div class="grid_4">
+                    <div class="block1">
+                        <time datetime="2018-01-01">{{$result[1]->date}}</time>
+                        <div class="extra_wrapper">
+                            <div class="text1 col1"><a href="#">{{$result[1]->name}}</a></div>
+                            {{$result[1]->info}}
+                        </div>
+                    </div>
+
+                </div>
+            @endif
+            @if(count($result) > 2)
+                <div class="grid_4">
+                    <div class="block1">
+                        <time datetime="2018-02-01">{{$result[2]->date}}</time>
+                        <div class="extra_wrapper">
+                            <div class="text1 col1"><a href="#">{{$result[2]->name}}</a></div>
+                            {{$result[2]->info}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="grid_4">
-                <div class="block1">
-                    <time datetime="2018-02-01">02<span>Vas</span></time>
-                    <div class="extra_wrapper">
-                        <div class="text1 col1"><a href="#">uamnibh Edeto</a></div>
-                        Ros convallisumsan. Maecenas vehicula egestas venenatis. Duis massa elit, auctor non
-                    </div>
-                </div>
-            </div>
+            @endif
         </div>
     </div>
     </body>
